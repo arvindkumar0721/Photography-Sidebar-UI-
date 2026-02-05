@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main background */
+.main_box {
+    background: url("photo.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hide checkbox */
+#check {
+    display: none;
+}
+
+/* ☰ Button */
+.btn_one i {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Sidebar */
+.sidebar_menu {
+    position: fixed;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.4s ease;
+}
+
+/* Logo */
+.sidebar_menu .logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar_menu .logo a {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    font-family: 'Genos', sans-serif;
+}
+
+.sidebar_menu .logo span {
+    color: #00bcd4;
+}
+
+/* ❌ Button */
+.btn_two i {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    margin-top: 40px;
+}
+
+.menu ul li {
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+.menu ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li i {
+    color: white;
+    margin-right: 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Social Media */
+.social_media {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.social_media a {
+    margin: 0 10px;
+    font-size: 22px;
+}
+
+/* Checkbox logic */
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
